@@ -4,7 +4,7 @@ layout: default
 
 <div class="relative site-grid" x-data="loadRecipes()">
     <aside class="sticky top-0 h-full max-h-screen col-span-1 py-16 space-y-12">
-        <h1 class="text-5xl italic">Our Recipes</h1>
+        <h1 class="text-5xl italic">Recipe Book</h1>
         <header>
             <label class="sr-only" for="search">Search</label>
             <input
@@ -13,9 +13,8 @@ layout: default
                 x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
                 placeholder="Filter recipes..."
                 type="search"
-                class="block w-full pb-2 text-2xl placeholder-gray-400 border-b border-black border-opacity-25 focus:outline-none"
+                class="block max-w-full pb-2 text-xl placeholder-gray-400 border-b border-black border-opacity-25 w-72 focus:outline-none"
             />
-            {# <input class="block w-full pb-2 text-2xl placeholder-gray-400 border-b border-black border-opacity-25 focus:outline-none" data-js="search" placeholder="Filter recipes..." name="search" type="text"> #}
         </header>
     </aside>
     <main class="col-span-2 col-start-2 py-16">
@@ -54,7 +53,7 @@ layout: default
                     {% endif %}
             {% endfor %}
         </ul>
-        <ul>
+        <ul x-show="search !== ''">
             <template x-for="(recipe, index) in filteredRecipes" :key="index">
                 <li class="text-xl leading-snug">
                     <a class="flex items-baseline py-2 space-x-2" :href="recipe.url">
@@ -83,12 +82,13 @@ layout: default
           get filteredRecipes() {
             if (this.search === "") {
               return false;
-            }
+            } else {
             return this.myForData.filter((item) => {
               return (item.title + item.searchTerms)
                 .toLowerCase()
                 .includes(this.search.toLowerCase());
             });
+            }
           },
         };
       }
