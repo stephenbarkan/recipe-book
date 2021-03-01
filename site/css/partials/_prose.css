@@ -1,0 +1,220 @@
+.prose {
+  @apply text-xl leading-relaxed;
+  max-width: 65ch;
+}
+.prose a {
+  @apply underline;
+}
+.prose strong {
+  @apply font-bold;
+}
+.prose ol > li {
+  @apply relative pl-8 -ml-8;
+}
+.prose ol > li:before {
+  content: counter(list-item) ".";
+  @apply absolute left-0 opacity-60;
+}
+.prose ul > li {
+  @apply relative pl-5;
+}
+.prose ul > li:before {
+  content: "";
+  @apply absolute bg-black rounded-full w-1.5 h-1.5 left-1;
+  top: 0.6875em;
+}
+.prose hr {
+  @apply mt-12 mb-12 border-black border-opacity-25;
+}
+.prose blockquote {
+  @apply pl-4 mt-6 mb-6 font-medium border-l border-black;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+.prose blockquote p:first-of-type:before {
+  content: open-quote;
+}
+.prose blockquote p:last-of-type:after {
+  content: close-quote;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply text-opacity-100;
+}
+.prose h1 {
+  color: theme("colors.black");
+  @apply text-3xl;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
+}
+.prose h2 {
+  @apply text-2xl font-normal leading-tight;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.prose h3 {
+  @apply text-xl font-bold leading-tight;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+.prose h4 {
+  @apply text-lg font-bold leading-tight;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+.prose figure figcaption {
+  color: theme("colors.black");
+  opacity: 0.75;
+  font-size: 0.875em;
+  line-height: 1.4285714;
+  margin-top: 0.8571429em;
+}
+.prose code {
+  color: theme("colors.black");
+  font-size: 0.875em;
+  padding: 0.25em 0;
+  @apply bg-black border border-black border-opacity-25 bg-opacity-5;
+}
+.prose code:after,
+.prose code:before {
+  content: "`";
+}
+.prose a code {
+  color: theme("colors.black");
+}
+.prose pre {
+  @apply bg-black border border-white border-opacity-25;
+  overflow-x: auto;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  margin-top: 1.7142857em;
+  margin-bottom: 1.7142857em;
+  padding: 0.8571429em 1.1428571em;
+}
+.prose pre code {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: 400;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+.prose pre code:after,
+.prose pre code:before {
+  content: "";
+}
+.prose table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+}
+.prose thead {
+  color: theme("colors.black");
+  font-weight: 600;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.75);
+}
+.prose thead th {
+  vertical-align: bottom;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+.prose tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+.prose tbody tr:last-child {
+  border-bottom-width: 0;
+}
+.prose tbody td {
+  vertical-align: top;
+  padding: 0.5714286em;
+}
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.prose figure,
+.prose img,
+.prose video {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.prose figure > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.prose h2 code {
+  font-size: 0.875em;
+}
+.prose h3 code {
+  font-size: 0.9em;
+}
+.prose ol,
+.prose ul {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.prose li {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.prose li:first-child {
+  margin-top: 0;
+}
+.prose li:last-child {
+  margin-bottom: 0;
+}
+.prose > ul > li p {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.prose > ul > li > :first-child,
+.prose > ol > li > :first-child {
+  margin-top: 0;
+}
+.prose > ul > li > :last-child,
+.prose > ol > li > :last-child {
+  margin-bottom: 0;
+}
+.prose ol ol,
+.prose ol ul,
+.prose ul ol,
+.prose ul ul {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.prose h2 + *,
+.prose h3 + *,
+.prose h4 + *,
+.prose hr + * {
+  margin-top: 0;
+}
+.prose thead th:first-child {
+  padding-left: 0;
+}
+.prose thead th:last-child {
+  padding-right: 0;
+}
+.prose tbody td:first-child {
+  padding-left: 0;
+}
+.prose tbody td:last-child {
+  padding-right: 0;
+}
+.prose *:first-child {
+  margin-top: 0;
+}
+.prose *:last-child {
+  margin-bottom: 0;
+}

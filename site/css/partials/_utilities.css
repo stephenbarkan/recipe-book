@@ -1,0 +1,20 @@
+.grid-absolute {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.grid-inset-0 {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.site-grid {
+  @apply grid items-start justify-between grid-cols-1 md:grid-cols-3 gap-x-16;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+#search::placeholder {
+  font-style: italic;
+}

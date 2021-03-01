@@ -1,0 +1,81 @@
+
+
+[
+    {
+        "title": "Barley, Kale, and Beet Salad",
+        "url": "/recipes/barley-kale-beet-salad/",
+        "searchTerms": ["lunch", "salad", "kale", "beet", "feta", "barley"]
+    }, 
+    {
+        "title": "Black Pepper Tofu and Asparagus",
+        "url": "/recipes/black-pepper-tofu-and-asparagus/",
+        "searchTerms": ["tofu", "asparagus", "rice"]
+    }, 
+    {
+        "title": "Broccoli Spoon Salad With Warm Vinaigrette",
+        "url": "/recipes/broccoli-salad/",
+        "searchTerms": ["salad", "broccoli", "side", "nuts", "raw"]
+    }, 
+    {
+        "title": "Warm Chickpea Bowls with Lemony Yogurt",
+        "url": "/recipes/chickpea-bowl-with-yogurt/",
+        "searchTerms": ["chickpea", "dinner", "yogurt", "greek", "fennel", "lunch"]
+    }, 
+    {
+        "title": "Chocolate Chip Cookies",
+        "url": "/recipes/chocolate-chip-cookie/",
+        "searchTerms": ["cookies", "dessert", "chocolate", "baking"]
+    }, 
+    {
+        "title": "Crispy Rice Bowl with Spring Vegetables",
+        "url": "/recipes/crispy-rice-bowl-with-spring-vegetables/",
+        "searchTerms": ["korean", "rice", "egg", "zucchini", "radish"]
+    }, 
+    {
+        "title": "Cuban Black Bean Soup",
+        "url": "/recipes/cuban-black-bean-soup/",
+        "searchTerms": ["cilantro", "beans", "black", "stew", "rice", "pork", "sour cream"]
+    }, 
+    {
+        "title": "Grilled Cheese with Roasted Carrots and Pesto",
+        "url": "/recipes/grilled-cheese-with-roasted-carrots-and-carrot-green-pesto/",
+        "searchTerms": ["carrots", "grilled cheese", "sandwich", "pesto", "carrot greens", "cheese"]
+    }, 
+    {
+        "title": "Jerk Chicken Skillet Dinner",
+        "url": "/recipes/jerk-chicken-skillet-dinner/",
+        "searchTerms": ["chicken", "dinner", "rice", "jerk"]
+    }, 
+    {
+        "title": "One Pot Chicken and Rice",
+        "url": "/recipes/one-pot-chicken-rice/",
+        "searchTerms": ["rice", "chicken", "peanut sauce", "cilantro", "cucumber"]
+    }, 
+    {
+        "title": "Pasta with Tomato Sauce",
+        "url": "/recipes/pasta-and-tomato-sauce/",
+        "searchTerms": ["dinner", "pasta", "tomato", "sauce"]
+    }, 
+    {
+        "title": "Pasta Salad with Spring Vegetables and Tomatoes",
+        "url": "/recipes/pasta-salad-with-spring-vegetables-and-tomatoes/",
+        "searchTerms": ["pasta", "salad", "sugar snap peas", "tomatoes", "summer", "basil", "mint"]
+    }, 
+    {
+        "title": "Risotto with Mushrooms and Thyme",
+        "url": "/recipes/risotto-with-mushrooms-and-thyme/",
+        "searchTerms": ["fancy", "rice", "risotto", "mushrooms"]
+    }, 
+    {
+        "title": "Turkey and Bean Chili",
+        "url": "/recipes/turkey-and-bean-chili/",
+        "searchTerms": ["chili", "ground meat", "comfort", "chilis"]
+    }, 
+    {
+        "title": "Weed Butter",
+        "url": "/recipes/weed-butter/",
+        "searchTerms": ["weed", "butter"]
+    }
+    
+]
+

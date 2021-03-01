@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="relative py-16 site-grid gap-y-6">
+    <nav class="col-span-1">
+        <a class="block text-base opacity-75 hover:underline" href="/">&#8592; Return to the recipe index</a>
+    </nav>
+    <header class="col-span-2 space-y-2">
+        <p class="text-base opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="hover:underline" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
+        <h1 class="-ml-1 text-4xl italic">{{title}}</h1>
+    </header>
+    <aside class="relative flex flex-col h-full col-span-1">
+        <figure>
+            <img class="max-h-96" src="{{image}}" alt="">
+        </figure>
+        <div class="flex-1 py-8">
+            <div class="sticky space-y-4 top-8">
+            <div class="flex items-baseline justify-between">
+                    <h2 class="text-xl">Ingredients</h2>
+                    <button class="text-base opacity-75 hover:underline" type="button" onclick="copyIngredients()">Copy to clipboard</button>
+                </div>
+                <span class="sr-only">
+                    <textarea class="text-sm" name="" id="ingredientcopier">
+                        {% for ingredient in ingredients %}
+                            {{ ingredient }}
+                        {% endfor %}
+                    </textarea>
+                </span>
+                <ul class="space-y-2 opacity-75">
+                    {% for ingredient in ingredients %}
+                        <li>{{ingredient}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <article class="col-span-2 pl-8 space-y-8">
+        <div class="prose">{{ content | safe }}</div>
+    </article>
+
+<script>
+function copyIngredients() {
+  /* Get the text field */
+  var copyText = document.getElementById("ingredientcopier");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+}
+</script>
