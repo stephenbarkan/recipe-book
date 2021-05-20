@@ -11,10 +11,9 @@ ingredients:
   - 2 dried pasilla chiles
   - 2 canned chipotle chiles in adobo
   - 6 Tbsp. vegetable oil, divided
-  - 3 lb. ground turkey
-  - preferably dark meat
-  - Kosher salt 2 onions
-  - finely chopped
+  - 3 lb. ground turkey, preferably dark meat
+  - Kosher salt
+  - 2 onions, finely chopped
   - 5 garlic cloves, smashed
   - 1 Tbsp. ground cumin
   - 2 tsp. dried oregano

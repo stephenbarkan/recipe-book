@@ -588,9 +588,9 @@ html {
   }
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1328px) {
   .container {
-    max-width: 1240px;
+    max-width: 1328px;
   }
 }
 
@@ -10571,7 +10571,7 @@ html {
 }
 
 .max-w-screen-xl {
-  max-width: 1240px;
+  max-width: 1328px;
 }
 
 .min-h-0 {
@@ -25649,9 +25649,9 @@ html {
     }
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1328px) {
     .xs\:container {
-      max-width: 1240px;
+      max-width: 1328px;
     }
   }
 
@@ -35282,7 +35282,7 @@ html {
   }
 
   .xs\:max-w-screen-xl {
-    max-width: 1240px;
+    max-width: 1328px;
   }
 
   .xs\:min-h-0 {
@@ -50317,9 +50317,9 @@ html {
     }
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1328px) {
     .sm\:container {
-      max-width: 1240px;
+      max-width: 1328px;
     }
   }
 
@@ -59950,7 +59950,7 @@ html {
   }
 
   .sm\:max-w-screen-xl {
-    max-width: 1240px;
+    max-width: 1328px;
   }
 
   .sm\:min-h-0 {
@@ -74985,9 +74985,9 @@ html {
     }
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1328px) {
     .md\:container {
-      max-width: 1240px;
+      max-width: 1328px;
     }
   }
 
@@ -84618,7 +84618,7 @@ html {
   }
 
   .md\:max-w-screen-xl {
-    max-width: 1240px;
+    max-width: 1328px;
   }
 
   .md\:min-h-0 {
@@ -99653,9 +99653,9 @@ html {
     }
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1328px) {
     .lg\:container {
-      max-width: 1240px;
+      max-width: 1328px;
     }
   }
 
@@ -109286,7 +109286,7 @@ html {
   }
 
   .lg\:max-w-screen-xl {
-    max-width: 1240px;
+    max-width: 1328px;
   }
 
   .lg\:min-h-0 {
@@ -124282,7 +124282,7 @@ html {
   }
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1328px) {
   .xl\:container {
     width: 100%;
     margin-right: auto;
@@ -124321,9 +124321,9 @@ html {
     }
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1328px) {
     .xl\:container {
-      max-width: 1240px;
+      max-width: 1328px;
     }
   }
 
@@ -133954,7 +133954,7 @@ html {
   }
 
   .xl\:max-w-screen-xl {
-    max-width: 1240px;
+    max-width: 1328px;
   }
 
   .xl\:min-h-0 {
