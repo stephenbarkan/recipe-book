@@ -3,17 +3,32 @@ layout: default
 ---
 
 <div class="relative py-16 site-grid gap-x-24 gap-y-6">
+    {# dotted line #}
+    <div class="absolute inset-0 gap-0 py-16 site-grid">
+        <div class="w-1 h-full col-start-2 text-black border-l border-black border-opacity-10">
+        </div>
+    </div>
     <div class="relative flex flex-col h-full col-span-1 space-y-4">
         <nav>
-            <a class="block text-base opacity-75 hover:underline" href="/">&#8592; Return to the recipe index</a>
+            <a class="block text-base underline opacity-75 hover:opacity-100" href="/">Return to the recipe index</a>
         </nav>
         <aside class="sticky top-0">
             <div class="flex-1 py-8">
                 <div class="space-y-4">
-                <div class="flex items-baseline justify-between">
+                <div class="space-y-0.5">
+                    <div class="flex items-baseline justify-between">
                         <h2 class="text-xl">Ingredients</h2>
-                        <button class="text-base opacity-75 hover:underline" type="button" onclick="copyIngredients()">Copy to clipboard</button>
+                        <button class="text-sm text-black text-opacity-75 hover:text-opacity-100 hover:underline" type="button" onclick="copyIngredients(this)">Copy to clipboard</button>
                     </div>
+                    <div class="flex-1 text-black opacity-30"
+                        style="border-bottom-style: dotted;
+                            border-bottom-width: 4px;
+                            border-color: black;
+                            border-image-source: url('/assets/images/dotted-line.svg');
+                            border-image-slice: 33% 33%;
+                            border-image-repeat: round;">
+                    </div>
+                </div>
                     <span class="sr-only">
                         <textarea class="text-sm" name="" id="ingredientcopier">
                             {% for ingredient in ingredients %}
@@ -30,9 +45,9 @@ layout: default
             </div>
         </aside>
     </div>
-    <div class="max-w-2xl col-span-2 mx-auto space-y-8">
+    <div class="relative max-w-2xl col-span-2 mx-auto space-y-8">
         <header class="flex flex-col items-center space-y-8 text-center">
-            <p class="text-base opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="underline" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
+            <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
             <h1 class="-ml-1 text-5xl italic">{{title}}</h1>
             <figure>
                 <img class="object-cover w-full max-w-72" src="{{image}}" alt="Image of {{title}}" style="height: 40vh">
@@ -40,13 +55,13 @@ layout: default
         </header>
         <article class="col-span-2 space-y-8">
          <div class="prose">
-
            {{ content | safe }}</div>
         </article>
     </div>
 
 <script>
-function copyIngredients() {
+function copyIngredients(obj) {
+    obj.innerText="Copied!"
   /* Get the text field */
   var copyText = document.getElementById("ingredientcopier");
 
@@ -56,5 +71,10 @@ function copyIngredients() {
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
+
+  window.setTimeout(() => {
+    obj.innerText="Copy to clipboard"
+
+  },1500)
 }
 </script>

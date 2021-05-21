@@ -9,7 +9,7 @@
   @apply font-bold;
 }
 .prose ol > li {
-  @apply relative pl-8 -ml-8;
+  @apply relative pl-8;
 }
 .prose ol > li:before {
   content: counter(list-item) ".";

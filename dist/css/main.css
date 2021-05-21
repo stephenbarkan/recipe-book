@@ -652,7 +652,6 @@ html {
 }
 
 .prose ol > li {
-  margin-left: -2rem;
   padding-left: 2rem;
   position: relative;
 }
