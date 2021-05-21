@@ -29,7 +29,7 @@ module.exports = {
       yellow: colors.amber,
     },
     fontFamily: {
-      serif: "Times New Roman",
+      serif: "Cardo,Times New Roman",
       sans: "Arial",
     },
     extend: {
