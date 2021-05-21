@@ -48,10 +48,12 @@ layout: default
     <div class="relative max-w-2xl col-span-2 mx-auto space-y-8">
         <header class="flex flex-col items-center space-y-8 text-center">
             <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
-            <h1 class="-ml-1 text-5xl italic">{{title}}</h1>
-            <figure>
-                <img class="object-cover w-full max-w-72" src="{{image}}" alt="Image of {{title}}" style="height: 40vh">
-            </figure>
+            <h1 class="-ml-1 text-5xl italic leading-tight">{{title}}</h1>
+            {% if image %}
+                <figure>
+                    <img class="object-cover w-full max-w-72" src="{{image}}" alt="Image of {{title}}" style="height: 40vh">
+                </figure>
+            {% endif %}
         </header>
         <article class="col-span-2 space-y-8">
          <div class="prose">

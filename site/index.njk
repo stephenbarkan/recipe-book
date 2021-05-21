@@ -15,7 +15,7 @@ layout: default
         <header class="sticky top-0 z-10 pt-16 pb-8 bg-gray-50">
             <label class="flex items-baseline gap-2">
             <span class="flex-shrink-0 text-xl">Filter recipes:</span>
-            <input
+            <input id="filter-field"
                 x-ref="searchField"
                 x-model="search"
                 x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
@@ -72,6 +72,9 @@ layout: default
                 </li>
             </template>
         </ul>
+        <div x-show="filteredRecipes.length === 0" class="flex justify-center w-full mt-8 text-3xl">
+            No Results
+        </div>
     </main>
 </div>
 
@@ -101,4 +104,10 @@ layout: default
         }{{ '' if loop.last else ', ' }}
         {% endfor %}
     ]
+</script>
+
+<script>
+    const input = document.querySelector("#filter-field")
+
+    input.focus()
 </script>

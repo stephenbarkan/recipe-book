@@ -75,6 +75,36 @@
         "title": "Weed Butter",
         "url": "/recipes/weed-butter/",
         "searchTerms": ["weed", "butter"]
+    }, 
+    {
+        "title": "Spicy Mushroom Larb",
+        "url": "/recipes/spicy-mushroom-larb/",
+        "searchTerms": ["thai", "vegetarian", "tofu", "herbal", "mint", "basil", "lettuce wrap", "fish sauce"]
+    }, 
+    {
+        "title": "Ginger-Scallion Tofu Scramble With Spinach and Chili Oil",
+        "url": "/recipes/ginger-scallion-tofu-scramble-with-spinach-chili-oil/",
+        "searchTerms": ["egg", "chili oil", "spinach"]
+    }, 
+    {
+        "title": "Dakgalbi",
+        "url": "/recipes/dakgalbi/",
+        "searchTerms": ["korean", "rice cakes", "sweet potato", "dinner", "lettuce wrap", "chicken"]
+    }, 
+    {
+        "title": "Vegan Saag Paneer",
+        "url": "/recipes/vegan-saag-paneer/",
+        "searchTerms": ["egg", "chili oil", "spinach"]
+    }, 
+    {
+        "title": "Brussels Sprouts Pizza",
+        "url": "/recipes/brussels-sprouts-pizza/",
+        "searchTerms": ["thai", "vegetarian", "tofu", "herbal", "mint", "basil", "lettuce wrap", "fish sauce"]
+    }, 
+    {
+        "title": "Pizza Dough",
+        "url": "/recipes/pizza-dough/",
+        "searchTerms": ["pizza", "dough", "bread"]
     }
     
 ]
