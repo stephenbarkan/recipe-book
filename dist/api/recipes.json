@@ -105,6 +105,16 @@
         "title": "Pizza Dough",
         "url": "/recipes/pizza-dough/",
         "searchTerms": ["pizza", "dough", "bread"]
+    }, 
+    {
+        "title": "Hong Shao Rou",
+        "url": "/recipes/hong-shao-rou/",
+        "searchTerms": ["chinese", "sichuan", "pork", "dinner", "braised"]
+    }, 
+    {
+        "title": "Whole Steamed Fish",
+        "url": "/recipes/whole-steamed-fish/",
+        "searchTerms": ["chinese", "sichuan", "fish", "steamed", "ginger"]
     }
     
 ]

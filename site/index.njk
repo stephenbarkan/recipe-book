@@ -4,15 +4,15 @@ layout: default
 
 <div class="relative pb-16 site-grid" x-data="loadRecipes()">
     <aside class="relative h-full col-span-1 space-y-12">
-        <h1 class="sticky top-0 py-16 text-5xl italic">Recipe Book</h1>
+        <h1 class="top-0 pt-8 text-5xl italic md:py-16 md:sticky">Recipe Book</h1>
     </aside>
-    <main class="relative col-span-2 col-start-2">
+    <main class="relative md:col-start-2 md:col-span-2">
         {% set letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] %}
         {% set newLetters = [] %}
         {% for recipe in collections.recipe %}
             {% set newLetters = (newLetters.push(recipe.data.title[0]), newLetters) %}
         {% endfor %}
-        <header class="sticky top-0 z-10 pt-16 pb-8 bg-gray-50">
+        <header class="sticky top-0 z-10 py-8 md:pt-16 bg-gray-50">
             <label class="flex items-baseline gap-2">
             <span class="flex-shrink-0 text-xl">Filter recipes:</span>
             <input id="filter-field"
@@ -35,7 +35,7 @@ layout: default
                             {% if letter === firstLetter %}
                                 <li class="text-xl leading-snug" data-js="recipe" data-search-title="{{recipe.data.title}}">
                                     <a class="flex items-baseline py-2 space-x-2" href="{{recipe.url}}">
-                                        <span class="flex-shrink-0 text-black text-opacity-75 hover:text-opacity-100 hover:underline" style="text-decoration-thickness: 1px">{{recipe.data.title}}</span>
+                                        <span class="text-black text-opacity-75 truncate md:flex-shrink-0 hover:text-opacity-100 hover:underline" style="text-decoration-thickness: 1px">{{recipe.data.title}}</span>
                                         <div class="flex-1 opacity-30"
                                              style="border-bottom-style: dotted;
                                                     border-bottom-width: 4px;
