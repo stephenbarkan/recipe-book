@@ -8,7 +8,7 @@
 }
 
 .site-grid {
-  @apply grid items-start justify-between grid-cols-1 md:grid-cols-3 gap-x-16;
+  @apply grid items-start justify-between grid-cols-1 md:grid-cols-3 md:gap-x-16;
 }
 
 [x-cloak] {
@@ -17,4 +17,12 @@
 
 #search::placeholder {
   font-style: italic;
+}
+
+#ingredient-drawer {
+  transform: translateY(calc(100% - 60px));
+}
+
+#ingredient-drawer.isOpen {
+  transform: none;
 }

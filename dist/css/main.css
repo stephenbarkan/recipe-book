@@ -610,12 +610,12 @@ html {
   display: grid;
   align-items: flex-start;
   justify-content: space-between;
-  column-gap: 4rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 @media (min-width: 768px){
   .site-grid{
+    column-gap: 4rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -634,6 +634,14 @@ html {
 
 #search::placeholder {
   font-style: italic;
+}
+
+#ingredient-drawer {
+  transform: translateY(calc(100% - 60px));
+}
+
+#ingredient-drawer.isOpen {
+  transform: none;
 }
 
 .prose {
@@ -8110,7 +8118,7 @@ html {
 
 .text-5xl{
   font-size: 3rem;
-  line-height: 1;
+  line-height: 1.15;
 }
 
 .text-6xl{
@@ -21030,7 +21038,7 @@ html {
 }
 
 .tracking-tight{
-  letter-spacing: -0.025em;
+  letter-spacing: -.015em;
 }
 
 .tracking-normal{
@@ -32821,7 +32829,7 @@ html {
 
   .xs\:text-5xl{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.15;
   }
 
   .xs\:text-6xl{
@@ -45728,7 +45736,7 @@ html {
   }
 
   .xs\:tracking-tight{
-    letter-spacing: -0.025em;
+    letter-spacing: -.015em;
   }
 
   .xs\:tracking-normal{
@@ -57489,7 +57497,7 @@ html {
 
   .sm\:text-5xl{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.15;
   }
 
   .sm\:text-6xl{
@@ -70396,7 +70404,7 @@ html {
   }
 
   .sm\:tracking-tight{
-    letter-spacing: -0.025em;
+    letter-spacing: -.015em;
   }
 
   .sm\:tracking-normal{
@@ -82157,7 +82165,7 @@ html {
 
   .md\:text-5xl{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.15;
   }
 
   .md\:text-6xl{
@@ -95064,7 +95072,7 @@ html {
   }
 
   .md\:tracking-tight{
-    letter-spacing: -0.025em;
+    letter-spacing: -.015em;
   }
 
   .md\:tracking-normal{
@@ -106825,7 +106833,7 @@ html {
 
   .lg\:text-5xl{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.15;
   }
 
   .lg\:text-6xl{
@@ -119732,7 +119740,7 @@ html {
   }
 
   .lg\:tracking-tight{
-    letter-spacing: -0.025em;
+    letter-spacing: -.015em;
   }
 
   .lg\:tracking-normal{
@@ -131493,7 +131501,7 @@ html {
 
   .xl\:text-5xl{
     font-size: 3rem;
-    line-height: 1;
+    line-height: 1.15;
   }
 
   .xl\:text-6xl{
@@ -144400,7 +144408,7 @@ html {
   }
 
   .xl\:tracking-tight{
-    letter-spacing: -0.025em;
+    letter-spacing: -.015em;
   }
 
   .xl\:tracking-normal{

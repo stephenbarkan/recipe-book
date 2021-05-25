@@ -3,8 +3,11 @@ layout: default
 ---
 
 <div class="relative pb-16 site-grid" x-data="loadRecipes()">
-    <aside class="relative h-full col-span-1 space-y-12">
-        <h1 class="top-0 pt-8 text-5xl italic md:py-16 md:sticky">Recipe Book</h1>
+    <aside class="relative h-full col-span-1">
+        <div class="top-0 flex flex-col gap-3 pt-8 md:pt-16 md:sticky">
+            <h1 class="text-5xl italic tracking-tight">Recipe Book</h1>
+            <p class="text-black text-opacity-75">Curated by <a class="text-black text-opacity-75 hover:underline hover:text-opacity-100" href="https://stephenbarkan.com">Stephen Barkan</a></p>
+        </div>
     </aside>
     <main class="relative md:col-start-2 md:col-span-2">
         {% set letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] %}
@@ -108,6 +111,5 @@ layout: default
 
 <script>
     const input = document.querySelector("#filter-field")
-
     input.focus()
 </script>

@@ -2,17 +2,25 @@
 layout: default
 ---
 
-<div class="relative py-16 site-grid gap-x-24 gap-y-6">
+<div class="relative py-8 pb-16 md:py-16 site-grid md:gap-x-24 gap-y-6" x-data="{isOpen: false}" :class="{'h-screen overflow-hidden' : isOpen === true}">
     {# dotted line #}
-    <div class="absolute inset-0 gap-0 py-16 site-grid">
+    <div class="container fixed inset-x-0 top-0 hidden h-screen gap-0 py-16 md:grid site-grid">
         <div class="w-1 h-full col-start-2 text-black border-l border-black border-opacity-10">
         </div>
     </div>
+    {# sidebar #}
     <div class="relative flex flex-col h-full col-span-1 space-y-4">
+        {# return to list link #}
         <nav>
-            <a class="block text-base underline opacity-75 hover:opacity-100" href="/">Return to the recipe index</a>
+            <a class="items-center hidden gap-1 text-base text-center opacity-75 md:flex md:text-left hover:opacity-100" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7" />
+                </svg>
+                <span>Return to the recipe index</span>
+            </a>
         </nav>
-        <aside class="sticky top-0">
+        {# ingredients #}
+        <aside class="sticky hidden top-8 md:block">
             <div class="flex-1 py-8">
                 <div class="space-y-4">
                 <div class="space-y-0.5">
@@ -45,10 +53,11 @@ layout: default
             </div>
         </aside>
     </div>
+    {# main #}
     <div class="relative max-w-2xl col-span-2 mx-auto space-y-8">
         <header class="flex flex-col items-center space-y-8 text-center">
             <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
-            <h1 class="-ml-1 text-5xl italic leading-tight">{{title}}</h1>
+            <h1 class="-ml-1 text-4xl italic tracking-tight md:text-5xl">{{title}}</h1>
             {% if image %}
                 <figure>
                     <img class="object-cover w-full max-w-72" src="{{image}}" alt="Image of {{title}}" style="height: 40vh">
@@ -60,7 +69,33 @@ layout: default
            {{ content | safe }}</div>
         </article>
     </div>
+    {# shade #}
+    <div class="fixed inset-0 transition bg-black bg-opacity-50"
+        x-show="isOpen"
+         @click="isOpen = !isOpen"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0">
+    </div>
+    {# ingredient drawer #}
+    <aside id="ingredient-drawer" class="fixed bottom-0 left-0 flex flex-col w-full overflow-hidden transition bg-white border-t border-black h-3/4 border-opacity-10 md:hidden"
+        :class="{'isOpen' : isOpen === true}">
+        <button class="flex items-center justify-center w-full gap-2 p-4" @click="isOpen = !isOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black text-opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 9l-7 7-7-7" />
+            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 15l7-7 7 7" />
+        </svg>
 
+            <h2 class="text-lg">See ingredients</h2>
+        </button>
+        <ul class="flex-1 pt-4 pb-8 mx-8 space-y-2 overflow-y-auto border-t border-black opacity-75 border-opacity-10">
+            {% for ingredient in ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+        </ul>
+    </aside>
+<div>
 <script>
 function copyIngredients(obj) {
     obj.innerText="Copied!"

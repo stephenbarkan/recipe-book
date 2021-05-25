@@ -35,6 +35,10 @@ module.exports = {
     extend: {
       fontSize: {
         "4xl": ["2.5rem", "1.25"],
+        "5xl": ["3rem", "1.15"],
+      },
+      letterSpacing: {
+        tight: "-.015em",
       },
       zIndex: {
         "-1": "-1",
