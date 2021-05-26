@@ -79,7 +79,7 @@ layout: default
         x-transition:leave-end="opacity-0">
     </div>
     {# ingredient drawer #}
-    <aside id="ingredient-drawer" class="fixed bottom-0 left-0 flex flex-col w-full overflow-hidden transition bg-white border-t border-black h-3/4 border-opacity-10 md:hidden"
+    <aside id="ingredient-drawer" class="fixed bottom-0 left-0 flex flex-col w-full overflow-hidden transition border-t border-black bg-gray-50 h-3/4 border-opacity-10 md:hidden"
         :class="{'isOpen' : isOpen === true}">
         <button class="flex items-center justify-center w-full p-4 space-x-2" @click="isOpen = !isOpen">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black text-opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
