@@ -20,7 +20,7 @@
 }
 
 #ingredient-drawer {
-  transform: translateY(calc(100% - 60px));
+  transform: translateY(calc(100% - 60px - env(safe-area-inset-bottom)));
 }
 
 #ingredient-drawer.isOpen {

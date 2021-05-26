@@ -1,5 +1,5 @@
 {% include "components/_html-head.njk" %}
-<body class="relative flex flex-col min-h-screen font-serif text-lg antialiased bg-gray-50">
+<body class="relative flex flex-col min-h-screen font-serif text-lg antialiased bg-gray-50"  x-data="{isOpen: false}" :class="{'h-screen overflow-hidden' : isOpen === true}">
 
 <div class="container">
     {{ content | safe }}
