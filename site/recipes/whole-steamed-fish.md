@@ -22,7 +22,7 @@ searchterms:
 ---
 
 1. Before cooking, wash the **fish** thoroughly and drain. Place the fish in a mesh colander at room temperature for 30 minutes to 1 hour, until completely dry.
-2. Place **a quarter of the green onion**s on a plate large enough to hold the entire fish. The green onions will hold the fish so it won’t stick to the plate when cooked.
+2. Place **a quarter of the green onions** on a plate large enough to hold the entire fish. The green onions will hold the fish so it won’t stick to the plate when cooked.
 3. Stuff **ginger slices** and **a quarter of the green onions** (white part) into the cavity of the fish. Rub both sides of the fish with **sesame oil**. Cover the fish with another **quarter of the green onions**. Pour** Shaoxing wine** over the fish.
 4. In a steamer, add half an inch of **water** and place a steaming basket down on top. Cover and bring water to a boil over high heat. Carefully place the plate holding the fish onto the steaming basket, cover and steam over high heat for 5 to 8 minutes, until you can easily pull the flesh from the bone with a fork. Stop heat immediately.
 5. Carefully use a spatula to transfer the fish to another large plate. Use chopsticks to remove the ginger and green onion from inside and above the fish, and discard the used ginger and onion.

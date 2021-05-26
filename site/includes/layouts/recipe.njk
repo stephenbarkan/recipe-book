@@ -1,10 +1,19 @@
 ---
 layout: default
 ---
-
-<div class="relative py-8 pb-16 md:py-16 site-grid md:gap-x-24 gap-y-6">
+<nav class="fixed top-0 left-0 right-0 z-20 flex items-center justify-between w-full h-16 px-6 border-b border-black bg-gray-50 border-opacity-10 lg:hidden">
+    <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black text-opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" vector-effect="non-scaling-stroke" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+    <h2 class="flex-1 font-semibold text-center">{{site.title}}</h2>
+    <div class="w-4"></div>
+</nav>
+<div class="pt-16 lg:hidden"></div>
+<div class="relative py-8 pb-16 lg:py-16 site-grid lg:gap-x-24 gap-y-6">
     {# dotted line #}
-    <div class="container fixed inset-x-0 top-0 hidden h-screen gap-0 py-16 md:grid site-grid">
+    <div class="container fixed inset-x-0 top-0 hidden h-screen gap-0 py-16 lg:grid site-grid">
         <div class="w-1 h-full col-start-2 text-black border-l border-black border-opacity-10">
         </div>
     </div>
@@ -12,7 +21,7 @@ layout: default
     <div class="relative flex flex-col h-full col-span-1 space-y-4">
         {# return to list link #}
         <nav>
-            <a class="items-center hidden gap-1 text-base text-center opacity-75 md:flex md:text-left hover:opacity-100" href="/">
+            <a class="items-center hidden gap-1 text-base text-center opacity-75 lg:flex lg:text-left hover:opacity-100" href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -20,7 +29,7 @@ layout: default
             </a>
         </nav>
         {# ingredients #}
-        <aside class="sticky hidden top-8 md:block">
+        <aside class="sticky hidden top-8 lg:block">
             <div class="flex-1 py-8">
                 <div class="space-y-4">
                 <div class="space-y-0.5">
@@ -54,13 +63,13 @@ layout: default
         </aside>
     </div>
     {# main #}
-    <div class="relative max-w-2xl mx-auto space-y-8 md:col-span-2">
+    <div class="relative max-w-2xl mx-auto space-y-8 lg:col-span-2">
         <header class="flex flex-col items-center space-y-8 text-center">
             <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
-            <h1 class="-ml-1 text-4xl italic tracking-tight md:text-5xl">{{title}}</h1>
+            <h1 class="-ml-1 text-4xl italic tracking-tight lg:text-5xl">{{title}}</h1>
             {% if image %}
                 <figure>
-                    <img class="object-cover w-full max-w-72" src="{{image}}" alt="Image of {{title}}" style="height: 40vh">
+                    <img class="object-cover w-full h-64 max-w-72 lg:h-80" src="{{image}}" alt="Image of {{title}}">
                 </figure>
             {% endif %}
         </header>
@@ -70,7 +79,7 @@ layout: default
         </article>
     </div>
     {# shade #}
-    <div class="fixed inset-0 transition bg-black bg-opacity-50"
+    <div class="fixed inset-0 z-20 transition bg-black bg-opacity-50"
         x-show="isOpen"
          @click="isOpen = !isOpen"
         x-transition:enter-start="opacity-0"
@@ -79,7 +88,7 @@ layout: default
         x-transition:leave-end="opacity-0">
     </div>
     {# ingredient drawer #}
-    <aside id="ingredient-drawer" class="fixed bottom-0 left-0 flex flex-col w-full overflow-hidden transition border-t border-black bg-gray-50 h-3/4 border-opacity-10 md:hidden"
+    <aside id="ingredient-drawer" class="fixed bottom-0 left-0 z-20 flex flex-col w-full overflow-hidden transition border-t border-black bg-gray-50 h-3/4 border-opacity-10 lg:hidden"
         :class="{'isOpen' : isOpen === true}">
         <button class="flex items-center justify-center w-full p-4 space-x-2" @click="isOpen = !isOpen">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black text-opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">

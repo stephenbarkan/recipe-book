@@ -8,7 +8,7 @@
 }
 
 .site-grid {
-  @apply grid items-start justify-between grid-cols-1 md:grid-cols-3 md:gap-x-16;
+  @apply grid items-start justify-between grid-cols-1 lg:grid-cols-3 lg:gap-x-16;
 }
 
 [x-cloak] {

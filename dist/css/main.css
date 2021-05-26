@@ -613,7 +613,7 @@ html {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-@media (min-width: 768px){
+@media (min-width: 960px){
   .site-grid{
     column-gap: 4rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -656,7 +656,8 @@ html {
 }
 
 .prose strong {
-  font-weight: 700;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .prose ol > li {

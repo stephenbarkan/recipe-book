@@ -6,7 +6,7 @@
   @apply underline;
 }
 .prose strong {
-  @apply font-bold;
+  @apply italic font-normal;
 }
 .prose ol > li {
   @apply relative pl-8;
