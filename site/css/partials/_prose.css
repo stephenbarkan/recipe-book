@@ -4,6 +4,7 @@
 }
 .prose a {
   @apply underline;
+  text-decoration-thickness: 1px;
 }
 .prose strong {
   @apply italic font-normal;
