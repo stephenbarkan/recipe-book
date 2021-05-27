@@ -1,0 +1,27 @@
+{# shade #}
+    <div class="fixed inset-0 z-20 transition bg-black bg-opacity-50"
+        x-show="isOpen"
+         @click="isOpen = !isOpen"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0">
+    </div>
+    {# ingredient drawer #}
+    <footer id="ingredient-drawer" class="fixed bottom-0 left-0 z-20 flex flex-col w-full overflow-hidden transition border-t border-black bg-gray-50 h-3/4 border-opacity-10 lg:hidden"
+        :class="{'isOpen' : isOpen === true}">
+        <button class="flex items-center justify-center w-full p-4 space-x-2" @click="isOpen = !isOpen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black text-opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 9l-7 7-7-7" />
+            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 15l7-7 7 7" />
+        </svg>
+        <h2 class="text-lg">See ingredients</h2>
+        </button>
+        {# iOS browser extra padding #}
+        <div x-show="isOpen === false" style="padding-bottom: env(safe-area-inset-bottom)"></div>
+        <ul class="flex-1 pt-4 pb-8 mx-8 space-y-2 overflow-y-auto border-t border-black opacity-75 border-opacity-10">
+            {% for ingredient in ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+        </ul>
+    </footer>

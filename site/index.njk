@@ -1,10 +1,9 @@
 ---
 layout: default
 ---
-
 <div class="relative pb-16 site-grid" x-data="loadRecipes()">
     <aside class="relative h-full col-span-1">
-        <div class="top-0 flex flex-col gap-3 pt-8 lg:pt-16 lg:sticky">
+        <div class="top-0 flex flex-col gap-3 pt-8 text-center lg:pt-16 lg:sticky lg:text-left">
             <h1 class="text-4xl italic tracking-tight lg:text-5xl">{{site.title}}</h1>
             <p class="text-black text-opacity-75">Curated by <a class="text-black text-opacity-75 hover:underline hover:text-opacity-100" href="https://stephenbarkan.com">Stephen Barkan</a></p>
         </div>
@@ -57,59 +56,18 @@ layout: default
                     {% endif %}
             {% endfor %}
         </ul>
-        <ul x-show="search !== ''">
-            <template x-for="(recipe, index) in filteredRecipes" :key="index">
-                <li class="text-xl leading-snug">
-                    <a class="flex items-baseline py-2 space-x-2" :href="recipe.url">
-                        <span class="flex-shrink-0 hover:underline" x-text="recipe.title"></span>
-                        <div class="flex-1 text-black opacity-30"
-                                style="border-bottom-style: dotted;
-                                    border-bottom-width: 4px;
-                                    border-color: black;
-                                    border-image-source: url('/assets/images/dotted-line.svg');
-                                    border-image-slice: 33% 33%;
-                                    border-image-repeat: round;">
-                        </div>
-                        <span class="flex-shrink-0 text-lg" x-text="index + 1"></span>
-                    </a>
-                </li>
-            </template>
-        </ul>
-        <div x-show="filteredRecipes.length === 0" class="flex justify-center w-full mt-8 text-3xl">
-            No Results
-        </div>
+        {% include "components/recipe-filter.njk" %}
     </main>
 </div>
 
 <script>
-    function loadRecipes() {
-        return {
-          search: "",
-          myForData: sourceData,
-          get filteredRecipes() {
-            if (this.search === "") {
-              return false;
-            } else {
-            return this.myForData.filter((item) => {
-              return (item.title + item.searchTerms)
-                .toLowerCase()
-                .includes(this.search.toLowerCase());
-            });
-            }
-          },
-        };
-      }
-      const sourceData = [
-        {% for recipe in collections.recipe %}{
-            "title": "{{recipe.data.title}}",
-            "url": "{{recipe.url}}",
-            "searchTerms": [{% for term in recipe.data.searchterms %}"{{term}}"{{ '' if loop.last else ', ' }}{% endfor %}]
-        }{{ '' if loop.last else ', ' }}
-        {% endfor %}
-    ]
-</script>
-
-<script>
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+if (!isTouchDevice()) {
     const input = document.querySelector("#filter-field")
     input.focus()
+}
 </script>

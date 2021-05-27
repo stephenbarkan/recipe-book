@@ -12,7 +12,7 @@ ingredients:
   - 8 ounces (½ pound) Brussels sprouts
   - 1 ½ to 2 teaspoons olive oil
   - Salt and freshly ground black pepper
-  - 1 batch easy whole wheat pizza dough or store-bought whole wheat dough (I used Trader Joe’s)
+  - 1 batch easy whole wheat pizza dough or store-bought whole wheat dough
   - 1 ½ to 2 cups grated low-moisture part-skim mozzarella cheese (6 to 8 ounces), depending on how cheesy you like your pizza
   - ¼ cup grated Parmesan cheese
 searchterms:
@@ -25,6 +25,8 @@ searchterms:
   - lettuce wrap
   - fish sauce
 ---
+
+[Use the dough recipe from here](/recipes/pizza-dough)
 
 1. Preheat oven to 425 degrees Fahrenheit and place a pizza stone on the middle rack if you have one. Slice your **onions** into thin rounds (the thinner you slice them, the faster they will cook).
 2. Prepare the **brussels** by slicing off the tough ends and discarding them. Use your fingers to pull off the individual leaves around the outside, then trim off the newly exposed tough end, and continue until you have broken the sprout into leaves. Repeat for about half of the brussels sprouts, then slice the rest into thin slices from top to bottom.
