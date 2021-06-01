@@ -9,6 +9,7 @@ ingredients:
   - 4-6 egg rolls (optional)
   - 3 tbsp shallots minced
   - 1.5 tbsp garlic minced
+  - lemongrass bits
   - 1/4 cup sugar
   - 1 tbsp fish sauce
   - 1/2 tbsp thick soy sauce
