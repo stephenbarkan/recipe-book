@@ -115,6 +115,11 @@
         "title": "Whole Steamed Fish",
         "url": "/recipes/whole-steamed-fish/",
         "searchTerms": ["chinese", "sichuan", "fish", "steamed", "ginger"]
+    }, 
+    {
+        "title": "Bun Thit Nuong",
+        "url": "/recipes/bun-thit-nuong/",
+        "searchTerms": ["vietnamese", "noodles", "pork", "spring", "herbs", "chargrilled"]
     }
     
 ]

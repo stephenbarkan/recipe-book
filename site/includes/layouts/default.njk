@@ -1,7 +1,7 @@
 {% include "components/_html-head.njk" %}
-<body class="relative flex flex-col min-h-screen font-serif text-lg antialiased bg-gray-50"  x-data="{isOpen: false}" :class="{'h-screen overflow-hidden' : isOpen === true}">
+<body data-barba="wrapper" class="relative flex flex-col min-h-screen font-serif text-lg antialiased bg-gray-50"  x-data="{isOpen: false}" :class="{'h-screen overflow-hidden' : isOpen === true}">
 
-<div class="container">
+<div class="container" data-barba="container">
     {{ content | safe }}
 </div>
 
