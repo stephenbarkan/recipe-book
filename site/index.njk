@@ -26,7 +26,7 @@ layout: default
             />
             </label>
         </header>
-        <ul x-show="search === ''" class="space-y-4 divide-y divide-black divide-opacity-10">
+        <ul x-show="search === ''" class="space-y-4">
             {% for letter in letters %}
                 {% if newLetters.includes(letter) %}
                     <li class="pt-4 space-y-2 first:pt-0">
