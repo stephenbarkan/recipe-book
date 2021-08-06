@@ -120,6 +120,11 @@
         "title": "Bun Thit Nuong",
         "url": "/recipes/bun-thit-nuong/",
         "searchTerms": ["vietnamese", "noodles", "pork", "spring", "herbs", "chargrilled"]
+    }, 
+    {
+        "title": "Banana Bread",
+        "url": "/recipes/banana-bread/",
+        "searchTerms": ["dessert", "banana", "bread", "loaf", "breakfast"]
     }
     
 ]
