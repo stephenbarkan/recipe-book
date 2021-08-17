@@ -60,7 +60,7 @@ layout: default
             <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
             <h1 class="-ml-1 text-4xl italic tracking-tight lg:text-5xl">{{title}}</h1>
             {% if image %}
-                <figure>
+                <figure class="w-full">
                     <img class="object-cover w-full h-64 max-w-72 lg:h-80" src="{{image}}" alt="Image of {{title}}">
                 </figure>
             {% endif %}
