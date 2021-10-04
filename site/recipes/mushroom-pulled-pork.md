@@ -4,7 +4,7 @@ source: Learn Eat Love
 sourcelink: https://www.liveeatlearn.com/mushroom-pulled-pork/#wprm-recipe-container-16230
 image: /assets/images/uploads/mushroom-pulled-pork.jpg
 ingredients:
-  - 4 king oyster mushrooms*
+  - 4 king oyster mushrooms
   - 2 Tbsp extra virgin olive oil 30 mL, divided
   - 1 tsp smoked paprika
   - ¼ tsp salt
