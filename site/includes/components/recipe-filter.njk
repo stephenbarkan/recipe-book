@@ -2,7 +2,7 @@
     <template x-for="(recipe, index) in filteredRecipes" :key="index">
         <li class="text-xl leading-snug">
             <a class="flex items-baseline py-2 space-x-2" :href="recipe.url">
-                <span class="flex-shrink-0 hover:underline" x-text="recipe.title"></span>
+                <span class="flex-shrink-0 text-black text-opacity-75 hover:underline" x-text="recipe.title"></span>
                 <div class="flex-1 text-black opacity-30"
                         style="border-bottom-style: dotted;
                             border-bottom-width: 4px;
@@ -11,7 +11,7 @@
                             border-image-slice: 33% 33%;
                             border-image-repeat: round;">
                 </div>
-                <span class="flex-shrink-0 text-lg" x-text="index + 1"></span>
+                <span class="flex-shrink-0 text-lg text-black text-opacity-50" x-text="index + 1"></span>
             </a>
         </li>
     </template>

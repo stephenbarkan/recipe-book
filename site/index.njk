@@ -14,7 +14,7 @@ layout: default
         {% for recipe in collections.recipe %}
             {% set newLetters = (newLetters.push(recipe.data.title[0]), newLetters) %}
         {% endfor %}
-        <header class="sticky top-0 z-10 py-8 lg:pt-16 bg-gray-50">
+        <header class="sticky top-0 z-10 px-4 py-8 -mx-4 lg:pt-16 bg-gray-50">
             <label class="flex items-baseline gap-2">
             <span class="flex-shrink-0 text-xl">Filter recipes:</span>
             <input id="filter-field"
@@ -35,9 +35,9 @@ layout: default
                         {% for recipe in collections.recipe %}
                             {% set firstLetter = recipe.data.title[0] %}
                             {% if letter === firstLetter %}
-                                <li class="text-xl leading-snug" data-js="recipe" data-search-title="{{recipe.data.title}}">
-                                    <a class="flex items-baseline py-2 space-x-2" href="{{recipe.url}}">
-                                        <span class="text-black text-opacity-75 truncate lg:flex-shrink-0 hover:text-opacity-100 hover:underline" style="text-decoration-thickness: 1px">{{recipe.data.title}}</span>
+                                <li class="relative text-xl leading-snug" data-js="recipe" data-search-title="{{recipe.data.title}}">
+                                    <a class="flex items-baseline py-2 space-x-2 group" href="{{recipe.url}}">
+                                        <span class="text-black text-opacity-75 truncate lg:flex-shrink-0 group-hover:text-opacity-100 group-hover:underline" style="text-decoration-thickness: 1px">{{recipe.data.title}}</span>
                                         <div class="flex-1 opacity-30"
                                              style="border-bottom-style: dotted;
                                                     border-bottom-width: 4px;
@@ -47,6 +47,9 @@ layout: default
                                                     border-image-repeat: round;">
                                         </div>
                                         <span class="flex-shrink-0 text-lg text-black text-opacity-50">{{loop.index}}</span>
+                                    {% if recipe.data.image %}
+                                    <img class="absolute right-0 z-10 hidden object-cover h-40 transform -translate-y-1/2 top-1/2 group-hover:block w-60" src="{{recipe.data.image}}"/>
+                                    {% endif %}
                                     </a>
                                 </li>
                             {% endif %}

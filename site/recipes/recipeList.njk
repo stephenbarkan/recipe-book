@@ -3,12 +3,6 @@ permalink: /api/recipes.json
 layout: blank
 eleventyExcludeFromCollections: true
 ---
-{# [
-  {% for recipe in collections.recipe  %}
-    [{% for term in recipe.data.searchterms %}"{{term}}", {% endfor %}{% for word in recipe.data.title %}"{{word}}"{{ '' if loop.last else ',' }}{%endfor%}]{{ '' if loop.last else ',' }}
-  {% endfor %}
-] #}
-
 [
     {% for recipe in collections.recipe %}{
         "title": "{{recipe.data.title}}",

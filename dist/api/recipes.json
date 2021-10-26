@@ -1,5 +1,3 @@
-
-
 [
     {
         "title": "Barley, Kale, and Beet Salad",
@@ -125,6 +123,31 @@
         "title": "Banana Bread",
         "url": "/recipes/banana-bread/",
         "searchTerms": ["dessert", "banana", "bread", "loaf", "breakfast"]
+    }, 
+    {
+        "title": "Mushroom Scallops",
+        "url": "/recipes/mushroom-scallops/",
+        "searchTerms": ["vegetarian", "alternative", "mushroom", "king oyster"]
+    }, 
+    {
+        "title": "Mushroom Pulled Pork",
+        "url": "/recipes/mushroom-pulled-pork/",
+        "searchTerms": ["vegetarian", "alternative", "mushroom", "king oyster", "pork"]
+    }, 
+    {
+        "title": "Dan Dan Noodles",
+        "url": "/recipes/Dan Dan Noodles/",
+        "searchTerms": ["pork", "noodles", "mushroom", "shiitake", "chinese"]
+    }, 
+    {
+        "title": "Cinnamon Swirl Bread",
+        "url": "/recipes/cinnamon-swirl-bread/",
+        "searchTerms": ["dessert", "fall", "bread", "cast iron"]
+    }, 
+    {
+        "title": "Crispy Oven Fries",
+        "url": "/recipes/crispy-oven-fries/",
+        "searchTerms": ["potatoes", "french fries"]
     }
     
 ]
