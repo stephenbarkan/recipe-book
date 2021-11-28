@@ -48,7 +48,7 @@ layout: default
                                         </div>
                                         <span class="flex-shrink-0 text-lg text-black text-opacity-50">{{loop.index}}</span>
                                     {% if recipe.data.image %}
-                                    <img class="absolute right-0 z-10 hidden object-cover h-40 transform -translate-y-1/2 top-1/2 group-hover:block w-60" src="{{recipe.data.image}}"/>
+                                    <img loading="lazy" class="absolute right-0 z-10 hidden object-cover h-40 transform -translate-y-1/2 top-1/2 group-hover:block w-60" src="{{recipe.data.image}}"/>
                                     {% endif %}
                                     </a>
                                 </li>
