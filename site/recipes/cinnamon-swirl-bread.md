@@ -2,7 +2,7 @@
 title: Cinnamon Swirl Bread
 source: Cook it in Cast Iron
 sourcelink: https://www.americastestkitchen.com/books/cook-it-in-cast-iron?q=&fR[search_browse_slugs][0]=cook-it-in-cast-iron&fR[search_document_klass][0]=recipe&fR[search_site_list][0]=atk
-image:
+image: /assets/images/uploads/cinnamon-swirl-bread.jpg
 ingredients:
   - 1 cup warm milk
   - 8 tablespoons unsalted butter, melted
