@@ -148,6 +148,21 @@
         "title": "Crispy Oven Fries",
         "url": "/recipes/crispy-oven-fries/",
         "searchTerms": ["potatoes", "french fries"]
+    }, 
+    {
+        "title": "Rosemary Focaccia",
+        "url": "/recipes/rosemary-focaccia/",
+        "searchTerms": ["bake", "bread", "italian", "soup", "olive oil"]
+    }, 
+    {
+        "title": "Pull-Apart Garlic Rolls",
+        "url": "/recipes/pull-apart-garlic-rolls/",
+        "searchTerms": ["bake", "bread", "rolls", "dinner rolls", "soup"]
+    }, 
+    {
+        "title": "Bread Bowls",
+        "url": "/recipes/bread-bowls/",
+        "searchTerms": ["bread", "soup", "panera", "bowl", "loaf"]
     }
     
 ]
