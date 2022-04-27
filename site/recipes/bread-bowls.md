@@ -3,15 +3,15 @@ title: Bread Bowls
 source: Aaichi Savali
 sourcelink: https://www.aaichisavali.com/
 image: /assets/images/uploads/bread-bowls.jpg
+servings: six
 ingredients:
-  - 6 cups Bread Flour(You can use all-purpose flour too)
-  - 2 Tbsp Flax Meal/Ground Flax seeds(if you can’t find, you can totally skip it)
+  - 6 cups Bread Flour (You can use all-purpose flour too)
   - 2 Tsp Salt
   - 4 1/2 Tsp(2 packets) Active Dry Yeast
   - 2 Tsp Sugar
-  - 2 Cups Warm Water(the temperature should be around 110 to 120 degrees)
+  - 2 Cups Warm Water (the temperature should be around 110 to 120 degrees)
   - 3 Tbsp Olive oil
-  - Plant-based Milk for brushing(If not making vegan, then you can use milk or give egg wash)
+  - Plant-based Milk for brushing (If not making vegan, then you can use milk or give egg wash)
 searchterms:
   - bread
   - soup

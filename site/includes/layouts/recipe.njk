@@ -6,8 +6,7 @@ layout: default
 <div class="relative py-8 pb-16 lg:py-16 site-grid lg:gap-x-24 gap-y-6">
     {# dotted line #}
     <div class="container fixed inset-x-0 top-0 hidden h-screen gap-0 py-16 lg:grid site-grid">
-        <div class="w-1 h-full col-start-2 text-black border-l border-black border-opacity-10">
-        </div>
+        <div class="w-1 h-full col-start-2 text-black border-l border-black border-opacity-10"></div>
     </div>
     {# sidebar #}
     <div class="relative flex flex-col h-full col-span-1 space-y-4">
@@ -15,7 +14,7 @@ layout: default
         <nav>
             <a class="items-center hidden gap-1 text-base text-center opacity-75 lg:flex lg:text-left hover:opacity-100" href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7"/>
                 </svg>
                 <span>Return to the recipe index</span>
             </a>
@@ -24,20 +23,19 @@ layout: default
         <aside class="sticky hidden top-8 lg:block">
             <div class="flex-1 py-8">
                 <div class="space-y-4">
-                <div class="space-y-0.5">
-                    <div class="flex items-baseline justify-between">
-                        <h2 class="text-xl">Ingredients</h2>
-                        <button class="text-sm text-black text-opacity-75 hover:text-opacity-100 hover:underline" type="button" onclick="copyIngredients(this)">Copy to clipboard</button>
-                    </div>
-                    <div class="flex-1 text-black opacity-30"
+                    <div class="space-y-0.5">
+                        <div class="flex items-baseline justify-between">
+                            <h2 class="text-xl">Ingredients</h2>
+                            <button class="text-sm text-black text-opacity-75 hover:text-opacity-100 hover:underline" type="button" onclick="copyIngredients(this)">Copy to clipboard</button>
+                        </div>
+                        <div class="flex-1 text-black opacity-30"
                         style="border-bottom-style: dotted;
                             border-bottom-width: 4px;
                             border-color: black;
                             border-image-source: url('/assets/images/dotted-line.svg');
                             border-image-slice: 33% 33%;
-                            border-image-repeat: round;">
+                            border-image-repeat: round;"></div>
                     </div>
-                </div>
                     <span class="sr-only">
                         <textarea class="text-sm" name="" id="ingredientcopier">
                             {% for ingredient in ingredients %}
@@ -57,8 +55,17 @@ layout: default
     {# main #}
     <div class="relative max-w-2xl mx-auto space-y-8 lg:col-span-2">
         <header class="flex flex-col items-center space-y-8 text-center">
-            <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}<a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>{% else %}{{source}}{% endif %}</p>
-            <h1 class="-ml-1 text-4xl italic tracking-tight lg:text-5xl">{{title}}</h1>
+            <p class="text-base text-black text-opacity-75">Adapted from {% if sourcelink %}
+                    <a target="_blank" class="text-black text-opacity-75 underline hover:text-opacity-100" href="{{sourcelink}}">{{source}}</a>
+                {% else %}{{source}}
+                {% endif %}
+            </p>
+            <div class="flex flex-col gap-1">
+                <h1 class="-ml-1 text-4xl italic tracking-tight lg:text-5xl">{{title}}</h1>
+                {% if servings %}
+                    <p class="text-black text-opacity-75">Serves {{servings}}</p>
+                {% endif %}
+            </div>
             {% if image %}
                 <figure class="w-full">
                     <img class="object-cover w-full h-64 max-w-72 lg:h-80" src="{{image}}" alt="Image of {{title}}">
@@ -66,28 +73,28 @@ layout: default
             {% endif %}
         </header>
         <article class="col-span-2 space-y-8">
-         <div class="prose">
-           {{ content | safe }}</div>
+            <div class="prose">
+                {{ content | safe }}</div>
         </article>
     </div>
     {% include "components/recipe-footer.njk" %}
-<div>
-<script>
-function copyIngredients(obj) {
-    obj.innerText="Copied!"
-  /* Get the text field */
-  var copyText = document.getElementById("ingredientcopier");
+    <div>
+        <script>
+            function copyIngredients(obj) {
+                obj.innerText = "Copied!"
+                /* Get the text field */
+                var copyText = document.getElementById("ingredientcopier");
 
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+                /* Select the text field */
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);/* For mobile devices */
 
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
 
-  window.setTimeout(() => {
-    obj.innerText="Copy to clipboard"
+                window.setTimeout(() => {
+                    obj.innerText = "Copy to clipboard"
 
-  },1500)
-}
-</script>
+                }, 1500)
+            }
+        </script>
