@@ -163,6 +163,11 @@
         "title": "Bread Bowls",
         "url": "/recipes/bread-bowls/",
         "searchTerms": ["bread", "soup", "panera", "bowl", "loaf"]
+    }, 
+    {
+        "title": "Kale, Corn, and Onion Skillet Cakes",
+        "url": "/recipes/kale-corn-onion-skillet-cakes/",
+        "searchTerms": ["winter", "kale", "pancakes", "corncakes", "dinner", "comforting"]
     }
     
 ]
