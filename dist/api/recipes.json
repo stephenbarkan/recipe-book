@@ -168,6 +168,21 @@
         "title": "Kale, Corn, and Onion Skillet Cakes",
         "url": "/recipes/kale-corn-onion-skillet-cakes/",
         "searchTerms": ["winter", "kale", "pancakes", "corncakes", "dinner", "comforting"]
+    }, 
+    {
+        "title": "Croutons",
+        "url": "/recipes/croutons/",
+        "searchTerms": ["bread", "salad", "stale"]
+    }, 
+    {
+        "title": "Cocoa-Coffee Almond Cookies",
+        "url": "/recipes/cocoa-coffee-almond-cookies/",
+        "searchTerms": ["desert", "cookie", "italian"]
+    }, 
+    {
+        "title": "Smashed Potatoes With Thai-Style Chile and Herb Sauce",
+        "url": "/recipes/thai-smashed-potatoes/",
+        "searchTerms": ["thai", "bright", "sauce"]
     }
     
 ]
