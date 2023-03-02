@@ -5,25 +5,53 @@ layout: default
     <aside class="relative h-full col-span-1">
         <div class="top-0 flex flex-col gap-3 pt-8 text-center lg:pt-16 lg:sticky lg:text-left">
             <h1 class="text-4xl italic tracking-tight lg:text-5xl">{{site.title}}</h1>
-            <p class="text-black text-opacity-75">Curated by <a class="text-black text-opacity-75 hover:underline hover:text-opacity-100" href="https://stephenbarkan.com">Stephen Barkan</a></p>
+            <p class="text-black text-opacity-75">Curated by <a class="text-black text-opacity-75 hover:underline hover:text-opacity-100" href="https://stephenbarkan.com">Stephen Barkan</a>
+            </p>
         </div>
     </aside>
     <main class="relative lg:col-start-2 lg:col-span-2">
-        {% set letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] %}
+        {% set letters = [
+            'A',
+            'B',
+            'C',
+            'D',
+            'E',
+            'F',
+            'G',
+            'H',
+            'I',
+            'J',
+            'K',
+            'L',
+            'M',
+            'N',
+            'O',
+            'P',
+            'Q',
+            'R',
+            'S',
+            'T',
+            'U',
+            'V',
+            'W',
+            'X',
+            'Y',
+            'Z'
+        ] %}
         {% set newLetters = [] %}
         {% for recipe in collections.recipe %}
             {% set newLetters = (newLetters.push(recipe.data.title[0]), newLetters) %}
         {% endfor %}
         <header class="sticky top-0 z-10 px-4 py-8 -mx-4 lg:pt-16 bg-gray-50">
             <label class="flex items-baseline gap-2">
-            <span class="flex-shrink-0 text-xl">Filter recipes:</span>
-            <input id="filter-field"
+                <span class="flex-shrink-0 text-xl">Filter recipes:</span>
+                <input id="filter-field"
                 x-ref="searchField"
                 x-model="search"
                 x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
                 type="text"
                 class="block w-full pb-0.5 text-2xl italic text-black text-opacity-60 placeholder-gray-400 bg-transparent border-b border-black border-opacity-25 focus:outline-none"
-            />
+/>
             </label>
         </header>
         <ul x-show="search === ''" class="space-y-4">
@@ -32,31 +60,32 @@ layout: default
                     <li class="pt-4 space-y-2 first:pt-0">
                         <h2 class="text-2xl uppercase">{{letter}}</h2>
                         <ul>
-                        {% for recipe in collections.recipe %}
-                            {% set firstLetter = recipe.data.title[0] %}
-                            {% if letter === firstLetter %}
-                                <li class="relative text-xl leading-snug" data-js="recipe" data-search-title="{{recipe.data.title}}">
-                                    <a class="flex items-baseline py-2 space-x-2 group" href="{{recipe.url}}">
-                                        <span class="text-black text-opacity-75 truncate lg:flex-shrink-0 group-hover:text-opacity-100 group-hover:underline" style="text-decoration-thickness: 1px">{{recipe.data.title}}</span>
-                                        <div class="flex-1 opacity-30"
+                            {% for recipe in collections.recipe %}
+                                {% set firstLetter = recipe
+                                    .data
+                                    .title[0] %}
+                                {% if letter === firstLetter %}
+                                    <li class="relative text-xl leading-snug" data-js="recipe" data-search-title="{{recipe.data.title}}">
+                                        <a class="flex items-baseline py-2 space-x-2 group" href="{{recipe.url}}">
+                                            <span class="text-black text-opacity-75 truncate lg:flex-shrink-0 group-hover:text-opacity-100 group-hover:underline" style="text-decoration-thickness: 1px">{{recipe.data.title}}</span>
+                                            <div class="flex-1 opacity-30"
                                              style="border-bottom-style: dotted;
                                                     border-bottom-width: 4px;
                                                     border-color: black;
                                                     border-image-source: url('/assets/images/dotted-line.svg');
                                                     border-image-slice: 33% 33%;
-                                                    border-image-repeat: round;">
-                                        </div>
-                                        <span class="flex-shrink-0 text-lg text-black text-opacity-50">{{loop.index}}</span>
-                                    {% if recipe.data.image %}
+                                                    border-image-repeat: round;"></div>
+                                            <span class="flex-shrink-0 text-lg text-black text-opacity-50">{{loop.index}}</span>
+                                            {# {% if recipe.data.image %}
                                     <img loading="lazy" class="absolute right-0 z-10 hidden object-cover h-40 transform -translate-y-1/2 top-1/2 group-hover:block w-60" src="{{recipe.data.image}}"/>
-                                    {% endif %}
-                                    </a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
+                                    {% endif %} #}
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
                         </ul>
                     </li>
-                    {% endif %}
+                {% endif %}
             {% endfor %}
         </ul>
         {% include "components/recipe-filter.njk" %}
@@ -64,13 +93,11 @@ layout: default
 </div>
 
 <script>
-function isTouchDevice() {
-  return (('ontouchstart' in window) ||
-     (navigator.maxTouchPoints > 0) ||
-     (navigator.msMaxTouchPoints > 0));
-}
-if (!isTouchDevice()) {
-    const input = document.querySelector("#filter-field")
-    input.focus()
-}
+    function isTouchDevice() {
+        return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+    }
+    if (!isTouchDevice()) {
+        const input = document.querySelector("#filter-field")
+        input.focus()
+    }
 </script>
